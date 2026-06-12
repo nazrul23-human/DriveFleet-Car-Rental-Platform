@@ -6,10 +6,11 @@ import ExploreCars from "../pages/ExploreCars";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 
-// এগুলো এখন placeholder page হবে
+
 import AddCar from "../pages/AddCar";
 import MyBookings from "../pages/MyBookings";
 import MyAddedCars from "../pages/MyAddedCars";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -34,15 +35,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-car",
-        element: <AddCar />,
+        element: (
+          <PrivateRoute>
+            <AddCar />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-bookings",
-        element: <MyBookings />,
+        element: (
+          <PrivateRoute>
+            <MyBookings />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-added-cars",
-        element: <MyAddedCars />,
+        element: (
+          <PrivateRoute>
+            <MyAddedCars />
+          </PrivateRoute>
+        ),
       },
     ],
   },
