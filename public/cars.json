@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota Corolla",
+    "type": "Sedan",
+    "price": 80,
+    "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341"
+  },
+  {
+    "id": 2,
+    "name": "BMW X5",
+    "type": "SUV",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1555215695-3004980ad54e"
+  },
+  {
+    "id": 3,
+    "name": "Mercedes C-Class",
+    "type": "Luxury",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+  },
+  {
+    "id": 4,
+    "name": "Honda Civic",
+    "type": "Sedan",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7"
+  },
+  {
+    "id": 5,
+    "name": "Toyota Prado",
+    "type": "SUV",
+    "price": 170,
+    "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b"
+  },
+  {
+    "id": 6,
+    "name": "Audi A6",
+    "type": "Luxury",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6"
+  }
+]

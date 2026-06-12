@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [cars, setCars] = useState([]);
+
+useEffect(() => {
+  fetch("/cars.json")
+    .then((res) => res.json())
+    .then((data) => setCars(data));
+}, []);
   return (
     <div className="bg-gradient-to-r from-[#08152f] via-[#0d1f45] to-[#0f4c63] min-h-screen">
 
@@ -48,9 +56,50 @@ const Home = () => {
 
         </div>
 
+
       </div>
+      <section className="max-w-7xl mx-auto px-6 py-20">
+
+        <h2 className="text-4xl font-bold text-center text-white mb-12">
+          Available Cars
+        </h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {cars.map((car) => (
+  <div
+    key={car.id}
+    className="bg-[#16233b] rounded-xl p-4 shadow-lg hover:scale-105 duration-300"
+  >
+    <img
+      src={car.image}
+      alt={car.name}
+      className="w-full h-52 object-cover rounded-lg"
+    />
+
+    <h3 className="text-white text-xl font-bold mt-4">
+      {car.name}
+    </h3>
+
+    <p className="text-gray-300">
+      {car.type}
+    </p>
+
+    <p className="text-cyan-400 font-bold mt-2">
+      ${car.price} / Day
+    </p>
+
+    <button className="btn bg-cyan-500 text-white border-none mt-4 w-full hover:bg-cyan-600">
+      View Details
+    </button>
+  </div>
+))}
+        </div>
+
+      </section>
+
 
     </div>
+
   );
 };
 
