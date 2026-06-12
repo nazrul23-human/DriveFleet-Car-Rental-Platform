@@ -1,8 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink, Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
 
-  const user = null;
+  const { user, logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        toast.success("Logout Successful");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const navLinks = (
     <>
@@ -33,6 +46,7 @@ const Navbar = () => {
       )}
     </>
   );
+
 
   return (
     <div className="bg-[#16233b] border-b border-slate-700">
@@ -68,9 +82,13 @@ const Navbar = () => {
                 role="button"
               >
                 <img
-                  src="https://i.ibb.co/4pDNDk1/avatar.png"
+                  src={
+                    user?.photoURL ||
+                    "https://i.ibb.co/4pDNDk1/avatar.png"
+                  }
+                  referrerPolicy="no-referrer"
                   alt="user"
-                  className="w-12 h-12 rounded-full"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-cyan-400"
                 />
               </div>
 
@@ -97,7 +115,7 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                  <button>
+                  <button onClick={handleLogout}>
                     Logout
                   </button>
                 </li>
