@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-
+import CarDetails from "../pages/CarDetails";
 import Home from "../pages/Home";
 import ExploreCars from "../pages/ExploreCars";
 import Login from "../pages/Login";
@@ -20,6 +20,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/car-details/:id",
+        element: <CarDetails />,
       },
       {
         path: "/explore-cars",
@@ -57,7 +61,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      
+
     ],
   },
 ]);

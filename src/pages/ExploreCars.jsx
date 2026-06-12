@@ -1,5 +1,7 @@
-
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+
 
 const ExploreCars = () => {
   const [cars, setCars] = useState([]);
@@ -48,9 +50,12 @@ const ExploreCars = () => {
                 ${car.price} / Day
               </p>
 
-              <button className="btn bg-cyan-500 text-white border-none mt-4 w-full hover:bg-cyan-600">
+              <Link
+                to={`/car-details/${car.id}`}
+                className="btn bg-cyan-500 text-white border-none mt-4 w-full hover:bg-cyan-600"
+              >
                 View Details
-              </button>
+              </Link>
             </div>
           ))}
 
