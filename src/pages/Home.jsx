@@ -168,6 +168,52 @@ const Home = () => {
 
       </section>
 
+      <section className="max-w-7xl mx-auto px-6 py-20">
+
+        <h2 className="text-4xl font-bold text-center text-white mb-4">
+          What Our Customers Say
+        </h2>
+
+        <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+          Trusted by hundreds of happy customers across the country.
+        </p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="bg-[#16233b] p-6 rounded-xl shadow-lg hover:scale-105 duration-300">
+            <p className="text-gray-300">
+              "Excellent service! The booking process was smooth and the car was in perfect condition."
+            </p>
+
+            <h4 className="text-white font-bold mt-4">
+              — Rahim Ahmed
+            </h4>
+          </div>
+
+          <div className="bg-[#16233b] p-6 rounded-xl shadow-lg hover:scale-105 duration-300">
+            <p className="text-gray-300">
+              "Affordable prices and very professional support team. Highly recommended."
+            </p>
+
+            <h4 className="text-white font-bold mt-4">
+              — Nusrat Jahan
+            </h4>
+          </div>
+
+          <div className="bg-[#16233b] p-6 rounded-xl shadow-lg hover:scale-105 duration-300">
+            <p className="text-gray-300">
+              "The SUV I rented was clean, comfortable, and exactly as described."
+            </p>
+
+            <h4 className="text-white font-bold mt-4">
+              — Imran Hossain
+            </h4>
+          </div>
+
+        </div>
+
+      </section>
+
 
     </div>
 
