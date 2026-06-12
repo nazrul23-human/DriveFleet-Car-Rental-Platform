@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import ExploreCars from "../pages/ExploreCars";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-
+import NotFound from "../pages/NotFound";
 
 import AddCar from "../pages/AddCar";
 import MyBookings from "../pages/MyBookings";
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
