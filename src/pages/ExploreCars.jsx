@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import LoadingSpinner from "../components/LoadingSpinner";
 
 
 const ExploreCars = () => {
   const [cars, setCars] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/cars.json")
       .then((res) => res.json())
-      .then((data) => setCars(data));
+      .then((data) => {
+      setCars(data);
+      setLoading(false);
+    });
   }, []);
+  if (loading) {
+  return <LoadingSpinner />;
+}
 
   return (
     <div className="bg-gradient-to-r from-[#08152f] via-[#0d1f45] to-[#0f4c63] min-h-screen">
