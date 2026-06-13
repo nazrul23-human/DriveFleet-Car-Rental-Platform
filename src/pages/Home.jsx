@@ -137,7 +137,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="bg-[#16233b] p-6 rounded-xl shadow-lg">
+          <div className="bg-[#16233b] p-6 rounded-xl shadow-lg hover:scale-105 duration-300">
             <h3 className="text-white text-xl font-bold mb-3">
               24/7 Support
             </h3>
